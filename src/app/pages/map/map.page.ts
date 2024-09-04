@@ -1,20 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { Geolocation } from '@capacitor/geolocation';
+import {
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.page.html',
   styleUrls: ['./map.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class MapPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  async ngOnInit() {
+    await this.requestLocationPermission();
+    await this.getCurrentLocation();
   }
 
+  async requestLocationPermission() {
+    try {
+      await Geolocation.requestPermissions();
+      console.log('Location permission granted');
+    } catch (error) {
+      console.error('Error requesting location permission', error);
+    }
+  }
+
+  async getCurrentLocation() {
+    try {
+      const position = await Geolocation.getCurrentPosition();
+      console.log('Current position:', position);
+      // Here you would typically update your map with the current location
+    } catch (error) {
+      console.error('Error getting current position', error);
+    }
+  }
 }

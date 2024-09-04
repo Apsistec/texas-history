@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "931643951872",
+    "project_id": "texas-history-434319",
+    "storage_bucket": "texas-history-434319.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931643951872:android:e8659af73c77c1f69901e5",
+        "android_client_info": {
+          "package_name": "com.markers.texas_history"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931643951872-tccg6e23dasq2gncf6pllmtf7cb1dmh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo5DM4XB9C_N4b7UjDwgtuZ02dcIfToAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931643951872-tccg6e23dasq2gncf6pllmtf7cb1dmh8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "931643951872-5c8fb1u7qdrdced1j5feima57f8fjajs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.markers.texas-history"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
